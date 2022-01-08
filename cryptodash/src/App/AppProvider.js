@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 const cc = require ('cryptocompare');
+const API_KEY = `${process.env.REACT_APP_API_KEY}`
+cc.setApiKey(API_KEY)
 
 export const AppContext = React.createContext();
 

@@ -10,6 +10,20 @@ const Bar = styled.div`
 
 const Logo = styled.div`
     font-size: 1.5em;
+    cursor: pointer; 
+    color: #484848;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer
+
+    &:hover {
+        color: #fff;
+        text-shadow: 0 0 10px #fff,
+                    0 0 20px #fff, 
+                    0 0 40px #fff;  
+    }
 `
 
 const ControlButtonElem = styled.div`
@@ -18,6 +32,13 @@ const ControlButtonElem = styled.div`
     ${props => props.active && css`
         color: #03ff03;
     `}
+
+    &:hover {
+        color: #fff;
+        text-shadow: 0 0 10px #fff,
+                    0 0 20px #fff, 
+                    0 0 40px #fff;
+    }
 `
 
 function toProperCase(name){
@@ -40,7 +61,7 @@ function ControlButton({name}){
 
 export default function AppBar(){
     return <Bar> 
-        <Logo> CryptoDash</Logo>
+        <Logo>CryptoDash</Logo>
         <div/>
         <ControlButton active name = {"Dashboard"}/> 
         <ControlButton name = {"Settings"}/> 

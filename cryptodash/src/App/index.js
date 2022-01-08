@@ -1,5 +1,5 @@
 import './App.css';
-import Settings from '../Settings';
+import Settings from '../Settings/Index';
 import { Component } from 'react';
 import AppLayout from './AppLayout';
 import AppBar from './AppBar';

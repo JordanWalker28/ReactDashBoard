@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const cc = require ('cryptocompare');
 const API_KEY = `${process.env.REACT_APP_API_KEY}`

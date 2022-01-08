@@ -2,8 +2,9 @@ import React from 'react';
 import WelcomeMessage from './WelcomeMessage';
 import ConfirmButton from './ConfirmButton';
 
-export default function(){
+export default function Index() {
     return <div>
-        <WelcomeMessage/> <ConfirmButton/>
+        <WelcomeMessage/>
+        <ConfirmButton/>
     </div>
 }

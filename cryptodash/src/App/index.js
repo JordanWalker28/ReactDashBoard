@@ -1,5 +1,5 @@
 import './App.css';
-import WelcomeMessage from './WelcomeMessage';
+import Settings from '../Settings';
 import { Component } from 'react';
 import AppLayout from './AppLayout';
 import AppBar from './AppBar';
@@ -23,7 +23,7 @@ class App extends Component {
       <AppLayout>
         <AppProvider>
           <AppBar/>
-          <WelcomeMessage/> 
+          <Settings/> 
           {/* <MyButton>Hello</MyButton>
           <MyButton primary>Hello</MyButton>
           <TomatoButton>Hello</TomatoButton> */}

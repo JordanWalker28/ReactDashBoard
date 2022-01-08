@@ -3,6 +3,7 @@ import WelcomeMessage from './WelcomeMessage';
 import { Component } from 'react';
 import AppLayout from './AppLayout';
 import AppBar from './AppBar';
+import {AppProvider} from './AppProvider';
 // const MyButton = styled.div`
 //   color: green;
 
@@ -20,15 +21,15 @@ class App extends Component {
   render(){
     return (
       <AppLayout>
-        <AppBar/>
-
-        <WelcomeMessage/> 
-        {/* <MyButton>Hello</MyButton>
-        <MyButton primary>Hello</MyButton>
-        <TomatoButton>Hello</TomatoButton> */}
+        <AppProvider>
+          <AppBar/>
+          <WelcomeMessage/> 
+          {/* <MyButton>Hello</MyButton>
+          <MyButton primary>Hello</MyButton>
+          <TomatoButton>Hello</TomatoButton> */}
+        </AppProvider>
       </AppLayout>
     )
 }}
 
 export default App;
-  

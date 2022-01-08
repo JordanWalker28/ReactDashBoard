@@ -4,6 +4,7 @@ import { Component } from 'react';
 import AppLayout from './AppLayout';
 import AppBar from './AppBar';
 import {AppProvider} from './AppProvider';
+import Content from '../Shared/Content'
 // const MyButton = styled.div`
 //   color: green;
 
@@ -23,7 +24,9 @@ class App extends Component {
       <AppLayout>
         <AppProvider>
           <AppBar/>
-          <Settings/> 
+          <Content>
+            <Settings/>
+          </Content> 
           {/* <MyButton>Hello</MyButton>
           <MyButton primary>Hello</MyButton>
           <TomatoButton>Hello</TomatoButton> */}

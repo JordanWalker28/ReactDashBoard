@@ -42,10 +42,10 @@ export class AppProvider extends React.Component {
 
     componentDidMount = () => {
         this.fetchCoins();
+        //this.fetchPrices();
         setInterval( () => {
             this.fetchPrices();
-          },2000)
-        this.fetchPrices();
+          },3000)
     }
 
     fetchPrices = async () => {
@@ -59,7 +59,7 @@ export class AppProvider extends React.Component {
         let returnData = [];
         for(let i = 0; i < this.state.favorites.length; i++){
             try {
-                let priceData = await cc.priceFull(this.state.favorites[i], 'USD');
+                let priceData = await cc.priceFull(this.state.favorites[i], 'GBP');
                 returnData.push(priceData);
             } catch(e) {
                 console.warn('Fetch price error: ', e );

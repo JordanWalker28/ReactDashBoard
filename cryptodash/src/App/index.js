@@ -1,5 +1,6 @@
 import './App.css';
 import Settings from '../Settings/Index';
+import Dashboard from '../Dashboard/Index';
 import { Component } from 'react';
 import AppLayout from './AppLayout';
 import AppBar from './AppBar';
@@ -26,6 +27,7 @@ class App extends Component {
           <AppBar/>
           <Content>
             <Settings/>
+            <Dashboard/>
           </Content> 
           {/* <MyButton>Hello</MyButton>
           <MyButton primary>Hello</MyButton>

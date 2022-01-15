@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import {SelectableTile} from '../Shared/Tile'
-import { fontSize3, fontSizeBig } from '../Shared/Styles';
+import { fontSize2, fontSizeBig } from '../Shared/Styles';
 import { CoinHeaderGridStyled } from '../Settings/CoinHeaderGrid';
 
 const JustifyRight = styled.div`
@@ -17,12 +17,17 @@ const TickerPrice = styled.div`
 `
 
 const numberFormat = number => {
-    return +(number + '').slice(0,8);
+    if(isNaN(number)){
+        return "No Data"
+    }
+    let value = +(number + '').slice(0,8);
+    let result = "£" + value
+    return result;
 }
 
 const PriceTileStyle = styled(SelectableTile)`
     ${props => props.compact && css`
-        ${fontSize3}
+        ${fontSize2}
         display: grid;
         grid-gap: 5px;
         grid-template-columns: repeat(3, 1fr);
@@ -52,13 +57,13 @@ function PriceTileCompact({sym, data}){
             <JustifyLeft> {sym} </JustifyLeft>
                 <ChangePercent data = {data}/>
             <div>
-                £{numberFormat(data.PRICE)}
+                {numberFormat(data.PRICE)}
             </div>
         </PriceTileStyle>
     ); 
 }
 
-function PriceTile({sym, data}){
+function PriceTileStyled({sym, data}){
     return (
         <PriceTileStyle>
             <CoinHeaderGridStyled>
@@ -66,16 +71,16 @@ function PriceTile({sym, data}){
                 <ChangePercent data = {data}/>
             </CoinHeaderGridStyled>
             <TickerPrice>
-                £{numberFormat(data.PRICE)}
+                {numberFormat(data.PRICE)}
             </TickerPrice>
         </PriceTileStyle>
     );
 }
 
-export default function({price,index}){
+export default function PriceTile({price,index}){
     let sym = Object.keys(price)[0];
     let data = price[sym]['GBP'];
-    let TileClass = index < 5 ? PriceTile : PriceTileCompact;
+    let TileClass = index < 5 ? PriceTileStyled : PriceTileCompact;
     return (
         <TileClass sym = {sym} data = {data}/> 
     )

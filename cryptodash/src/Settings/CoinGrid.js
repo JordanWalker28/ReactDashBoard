@@ -19,7 +19,7 @@ function getCoinsToDisplay(coinList, topSection, favorites, filterCoins){
   return topSection ? favorites : getLowerSectionCoins(coinList, filterCoins);
 }
 
-export default function ({topSection}){
+export default function CoinGrid({topSection}){
   return (
     <AppContext.Consumer>
     {({coinList, favorites, filteredCoins}) => (

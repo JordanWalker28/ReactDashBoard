@@ -47,7 +47,7 @@ const handleFilter = _.debounce((inputValue, coinList, setFilterCoins) => {
     handleFilter(inputValue, coinList, setFilteredCoins);
   }
   
-  export default function(){
+  export default function Search(){
     return (
       <AppContext.Consumer>
         {({setFilteredCoins, coinList}) =>

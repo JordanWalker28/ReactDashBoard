@@ -1,6 +1,4 @@
-const theme = 'dark';
-//const theme = 'light';
-export const lightTheme = theme === 'light';
+import { lightTheme } from "./Theme";
 
 export const color = lightTheme ? 'white' : '#061a44';
 export const color2 = lightTheme ? 'white' : '#010e2c';

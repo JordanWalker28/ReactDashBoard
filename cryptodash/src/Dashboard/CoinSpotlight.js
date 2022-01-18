@@ -8,7 +8,7 @@ const SpotLightName = styled.h2`
     text-align: center;
 `
 
-export default function() {
+export default function CoinSpotlight() {
     return (
         <AppContext.Consumer>
             {({currentFavorite, coinList}) => 

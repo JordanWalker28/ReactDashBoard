@@ -4,10 +4,10 @@ import {Tile} from '../Shared/Tile';
 import {AppContext} from '../App/AppProvider';
 import ReactHighcharts from 'react-highcharts';
 
-export default function() {
+export default function PriceChart() {
     return(
         <AppContext.Consumer>
-        {({}) => 
+        {() => 
             <Tile>
                 <ReactHighcharts config = {highchartsConfig()} />
             </Tile>

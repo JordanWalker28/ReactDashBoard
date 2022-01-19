@@ -11,6 +11,7 @@ function clickCoinHandler(topSection, coinKey, addCoin, removeCoin){
         addCoin(coinKey)
     }
 }
+
 export default function CoinTile({coinKey, topSection}){
     return <AppContext.Consumer>
         {({coinList, addCoin, removeCoin, isInFavorites}) => {

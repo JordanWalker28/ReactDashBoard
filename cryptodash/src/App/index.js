@@ -10,18 +10,6 @@ import styled from 'styled-components';
 const AppLayout =  styled.div`
     padding: 40px;
 `
-// const MyButton = styled.div`
-//   color: green;
-
-//   ${props => props.primary && css`
-//     color: palevioletred;
-//   `}
-// `
-
-// const TomatoButton = styled(MyButton)`
-//   color: tomato;
-//   border-color: tomato;
-// `;
 
 class App extends Component {
   render(){
@@ -33,9 +21,6 @@ class App extends Component {
             <Settings/>
             <Dashboard/>
           </Content> 
-          {/* <MyButton>Hello</MyButton>
-          <MyButton primary>Hello</MyButton>
-          <TomatoButton>Hello</TomatoButton> */}
         </AppProvider>
         </AppLayout>
     )

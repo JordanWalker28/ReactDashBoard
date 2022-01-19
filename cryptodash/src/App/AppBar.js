@@ -43,7 +43,7 @@ function ControlButton({name}){
 export default function AppBar(){
     return <Bar> 
         <Logo>CryptoDash</Logo>
-        <div/>
+        <br/>
         <ControlButton active name = {"Dashboard"}/> 
         <ControlButton name = {"Settings"}/> 
      </Bar>

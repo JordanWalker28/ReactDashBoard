@@ -2,10 +2,14 @@ import './App.css';
 import Settings from '../Settings/Index';
 import Dashboard from '../Dashboard/Index';
 import { Component } from 'react';
-import AppLayout from './AppLayout';
 import AppBar from './AppBar';
 import {AppProvider} from './AppProvider';
 import Content from '../Shared/Content'
+import styled from 'styled-components';
+
+const AppLayout =  styled.div`
+    padding: 40px;
+`
 // const MyButton = styled.div`
 //   color: green;
 
@@ -33,7 +37,7 @@ class App extends Component {
           <MyButton primary>Hello</MyButton>
           <TomatoButton>Hello</TomatoButton> */}
         </AppProvider>
-      </AppLayout>
+        </AppLayout>
     )
 }}
 

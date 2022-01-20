@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { AppContext } from '../App/AppProvider';
 import PriceTile from './PriceTile';
+import HighchartsTheme from './HighchartsTheme';
+import ReactHighcharts from 'react-highcharts';
+ReactHighcharts.Highcharts.setOptions(HighchartsTheme);
 
 const PriceGridStyled = styled.div`
     display: grid;

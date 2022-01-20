@@ -2,16 +2,16 @@ export default function () {
     return {
 
         title: {
-            text: 'Solar Employment Growth by Sector, 2010-2016'
+            text: 'CoinName'
           },
         
           subtitle: {
-            text: 'Source: thesolarfoundation.com'
+            text: 'Source: cryptocompare.com.com'
           },
         
           yAxis: {
             title: {
-              text: 'Number of Employees'
+              text: 'Price'
             }
           },
         
@@ -38,7 +38,7 @@ export default function () {
         
           series: [{
             name: 'Installation',
-            data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+            data: Array.from({length: 40}, () => Math.floor(Math.random() * 300))
           }],
         
           responsive: {

@@ -15,7 +15,7 @@ export class AppProvider extends React.Component {
         this.state = {
             page: 'Dashboard',
             favorites: [],
-            ...this.savedSettings(),
+            ...this.savedCoinSelection(),
             setPage: this.setPage,
             addCoin: this.addCoin,      
             removeCoin: this.removeCoin,
@@ -100,7 +100,7 @@ export class AppProvider extends React.Component {
         }))
     }
 
-    savedSettings(){
+    savedCoinSelection(){
         let cryptoDashData = JSON.parse(localStorage.getItem('cryptoDash'));
         if(!cryptoDashData){
             return {page: 'Coin Selection', firstVisit: true}

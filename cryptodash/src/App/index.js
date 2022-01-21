@@ -1,5 +1,5 @@
 import './App.css';
-import Settings from '../Settings/Index';
+import CoinSelection from '../CoinSelection/Index';
 import Dashboard from '../Dashboard/Index';
 import { Component } from 'react';
 import AppBar from './AppBar';
@@ -18,7 +18,7 @@ class App extends Component {
         <AppProvider>
           <AppBar/>
           <Content>
-            <Settings/>
+            <CoinSelection/>
             <Dashboard/>
           </Content> 
         </AppProvider>

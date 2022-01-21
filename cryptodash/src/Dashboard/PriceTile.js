@@ -2,7 +2,7 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import {SelectableTile} from '../Shared/Tile'
 import { fontSize2, fontSizeBig, greenBoxShadow} from '../Shared/Styles';
-import { CoinHeaderGridStyled } from '../Settings/CoinHeaderGrid';
+import { CoinHeaderGridStyled } from '../CoinSelection/CoinHeaderGrid';
 import { AppContext } from '../App/AppProvider';
 
 const JustifyRight = styled.div`

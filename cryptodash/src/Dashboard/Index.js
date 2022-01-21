@@ -14,7 +14,9 @@ const ChartGrid = styled.div`
 
 export default function Index() {
     return <Page name ="Dashboard">
+        <div><h1>Selected Coins</h1></div>
         <PriceGrid/>
+        <div><h1>Coin Information</h1></div>
         <ChartGrid>
             <CoinSpotlight/>
             <PriceChart/>

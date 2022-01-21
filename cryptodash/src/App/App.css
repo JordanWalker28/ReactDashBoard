@@ -2,4 +2,7 @@ body {
   background-color: #010e2c;
   color: white;
   font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
 }

@@ -103,7 +103,7 @@ export class AppProvider extends React.Component {
     savedSettings(){
         let cryptoDashData = JSON.parse(localStorage.getItem('cryptoDash'));
         if(!cryptoDashData){
-            return {page: 'Settings', firstVisit: true}
+            return {page: 'Coin Selection', firstVisit: true}
         }
         let{favorites, currentFavorite} = cryptoDashData;
         return {favorites, currentFavorite};

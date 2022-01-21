@@ -6,7 +6,7 @@ import CoinGrid from './CoinGrid';
 import Search from './Search';
 
 export default function Index() {
-    return <Page name ="Settings">
+    return <Page name ="Coin Selection">
         <WelcomeMessage/>
         <CoinGrid topSection/>
         <ConfirmButton/>

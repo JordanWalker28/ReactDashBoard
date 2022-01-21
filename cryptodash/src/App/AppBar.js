@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import {AppContext} from './AppProvider';
+import {greenBoxShadow} from '../Shared/Styles'
 
 const Bar = styled.div`
   display: grid; 
@@ -14,6 +15,14 @@ const Logo = styled.div`
 
 const ControlButtonElem = styled.div`
   cursor: pointer; 
+  margin: auto;
+  &:hover {
+        color: #fff;
+        text-shadow: 0 0 10px #fff,
+                    0 0 20px #fff, 
+                    0 0 40px #fff;
+        ${greenBoxShadow};
+    }
   ${props => props.active && css`
     text-shadow: 0px 0px 60px #03ff03;
   `}
@@ -45,7 +54,7 @@ export default function AppBar(){
         <Logo>CryptoDash</Logo>
         <br/>
         <ControlButton active name = {"Dashboard"}/> 
-        <ControlButton name = {"Settings"}/> 
+        <ControlButton name = {"Coin Selection"}/> 
      </Bar>
 }
 

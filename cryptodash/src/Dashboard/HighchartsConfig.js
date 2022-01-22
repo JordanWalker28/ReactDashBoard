@@ -1,4 +1,4 @@
-export default function () {
+export default function (historical) {
     return {
 
         title: {
@@ -14,12 +14,8 @@ export default function () {
               text: 'Price'
             }
           },
-        
-          xAxis: {
-            accessibility: {
-              rangeDescription: 'Range: 2010 to 2017'
-            }
-          },
+
+          xAxis: {type: 'datetime'},
         
           legend: {
             layout: 'vertical',
@@ -36,10 +32,7 @@ export default function () {
             }
           },
         
-          series: [{
-            name: 'Installation',
-            data: Array.from({length: 40}, () => Math.floor(Math.random() * 300))
-          }],
+          series: historical,
         
           responsive: {
             rules: [{

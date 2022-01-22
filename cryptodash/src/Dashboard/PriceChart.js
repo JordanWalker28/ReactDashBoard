@@ -7,9 +7,12 @@ import ReactHighcharts from 'react-highcharts';
 export default function PriceChart() {
     return(
         <AppContext.Consumer>
-        {() => 
+        {({historical}) => 
             <Tile>
-                <ReactHighcharts config = {highchartsConfig()} />
+                {historical ? 
+                    <ReactHighcharts config = {highchartsConfig(historical)} />
+                    : <div> Loading historical Data</div>    
+                }
             </Tile>
         }
         </AppContext.Consumer>

@@ -8,12 +8,15 @@ import ChartSelect from './ChartSelect';
 export default function PriceChart() {
     return(
         <AppContext.Consumer>
-        {({historical}) => 
+        {({historical, changeChartSelect}) => 
             <Tile>
-                <ChartSelect>
-                    <option value = "Days">Days</option>
-                    <option value = "Weeks">Weeks</option>
-                    <option value = "Months">Months</option>
+                <ChartSelect 
+                    defaultValue = {"months"}
+                    onChange = {e => changeChartSelect(e.target.value)}
+                >
+                        <option value = "days">Days</option>
+                        <option value = "weeks">Weeks</option>
+                        <option value = "months">Months</option>
                 </ChartSelect>
                 {historical ? 
                     <ReactHighcharts config = {highchartsConfig(historical)} />

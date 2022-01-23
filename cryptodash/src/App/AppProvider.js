@@ -26,6 +26,7 @@ export class AppProvider extends React.Component {
             setFilteredCoins: this.setFilteredCoins,
             confirmFavourites: this.confirmFavourites,
             setCurrentFavorite: this.setCurrentFavorite,
+            changeChartSelect: this.changeChartSelect
         }
     }
 
@@ -149,6 +150,10 @@ export class AppProvider extends React.Component {
     setPage = page => this.setState({page})
 
     setFilteredCoins = (filteredCoins) => this.setState({filteredCoins})
+
+    changeChartSelect = (value) => {
+        this.setState({timeInterval: value, historical: null}, this.fetchHistorical);
+      }
 
     render(){
         return (

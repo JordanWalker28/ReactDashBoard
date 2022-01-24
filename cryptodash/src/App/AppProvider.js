@@ -9,7 +9,7 @@ cc.setApiKey(API_KEY)
 export const AppContext = React.createContext();
 
 const MAX_FAVORITES = 10;
-const TIME_UNITS = 10;
+const TIME_UNITS = 60;
 
 export class AppProvider extends React.Component {
     constructor(props){
@@ -46,12 +46,13 @@ export class AppProvider extends React.Component {
     isInFavorites = key => _.includes(this.state.favorites, key);
 
     componentDidMount = () => {
-        this.fetchCoins();
-        this.fetchPrices();
-        this.fetchHistorical();
-        // setInterval( () => {
-        //     this.fetchPrices();
-        //   },3000)
+
+        setInterval( () => {
+            this.fetchCoins();
+            this.fetchPrices();
+            this.fetchHistorical();
+
+        },5000)
     }
 
     fetchPrices = async () => {

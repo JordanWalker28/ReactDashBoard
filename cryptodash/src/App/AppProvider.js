@@ -47,12 +47,10 @@ export class AppProvider extends React.Component {
 
     componentDidMount = () => {
 
-        setInterval( () => {
+
             this.fetchCoins();
             this.fetchPrices();
             this.fetchHistorical();
-
-        },5000)
     }
 
     fetchPrices = async () => {

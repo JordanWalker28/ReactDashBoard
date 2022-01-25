@@ -4,12 +4,14 @@ import PriceGrid from './PriceGrid';
 import CoinSpotlight from './CoinSpotlight';
 import styled from 'styled-components';
 import PriceChart from './PriceChart';
+import LiveChart from './LiveChart';
 
 const ChartGrid = styled.div`
     display: grid;
     margin-top: 20px;
     grid-gap: 15px;
     grid-template-columns: 1fr 3fr;
+    margin-bottom: 15px;
 `
 
 export default function Index() {
@@ -21,5 +23,6 @@ export default function Index() {
             <CoinSpotlight/>
             <PriceChart/>
         </ChartGrid>
+        <LiveChart />
     </Page>
 }
